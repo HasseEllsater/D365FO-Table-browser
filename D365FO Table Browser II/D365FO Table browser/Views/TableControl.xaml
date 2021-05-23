@@ -1,0 +1,145 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+             xmlns:wv2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf" 
+             xmlns:ViewModels="clr-namespace:D365FO_Table_browser.ViewModels" xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks" x:Class="D365FO_Table_browser.Views.TableControl" 
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="880" Height="Auto"  MinWidth="970"  >
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="36" />
+            <ColumnDefinition Width="113"/>
+            <ColumnDefinition Width="150" />
+            <ColumnDefinition Width="250" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="15" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="1" Grid.Column="0" Content="Company Account" Grid.ColumnSpan="2"/>
+        <ComboBox Grid.Column="0" Grid.Row="2" x:Name="CompanyAccount" Padding="2"  
+                  Margin="{StaticResource ControlMargin}"  
+                  Controls:TextBoxHelper.ClearTextButton="True"
+                  Controls:TextBoxHelper.UseFloatingWatermark="False"
+                  Controls:TextBoxHelper.Watermark="Select company"
+                    Width="Auto" IsReadOnly="True" ItemsSource="{Binding CompanyAccounts}" Grid.ColumnSpan="2"
+                  >
+            <ComboBox.DataContext>
+                <ViewModels:CompanyAccountViewModel/>
+            </ComboBox.DataContext>
+        </ComboBox>
+
+        <Label Grid.Row="1" Grid.Column="2" Content="Server"/>
+        <ComboBox Grid.Column="2" Grid.Row="2" x:Name="Server" Padding="2"  
+                  Margin="{StaticResource ControlMargin}"  
+                  Controls:TextBoxHelper.ClearTextButton="True"
+                  Controls:TextBoxHelper.UseFloatingWatermark="False"
+                  Controls:TextBoxHelper.Watermark="Select server"
+                  Width="Auto" IsReadOnly="True" ItemsSource="{Binding ServerURLS}"
+                  >
+            <ComboBox.DataContext>
+                <ViewModels:ServerListViewModel/>
+            </ComboBox.DataContext>
+        </ComboBox>
+
+        <Label Grid.Row="1" Grid.Column="3" Content="Table"/>
+        <ComboBox Grid.Column="3" Grid.Row="2" x:Name="Tables" Padding="2"  
+                  Margin="{StaticResource ControlMargin}"  
+                  Controls:TextBoxHelper.ClearTextButton="True"
+                  Controls:TextBoxHelper.UseFloatingWatermark="False"
+                  Controls:TextBoxHelper.Watermark="Pick the table you wish to browse"
+                  Width="Auto"
+                  SelectionChanged="Tables_SelectionChanged" IsReadOnly="True" ItemsSource="{Binding Tables}">
+            <ComboBox.DataContext>
+                <ViewModels:TableViewModel/>
+            </ComboBox.DataContext>
+        </ComboBox>
+        <!--SelectedItem="{Binding D365Table,
+                  TargetNullValue={x:Static CollectionView.NewItemPlaceholder}}"-->
+        <Button x:Name="OpenRDP" Click="OpenTable_Click" ToolTip="{StaticResource OpenTable}" Grid.Column="4" Grid.Row="2" HorizontalAlignment="Left"
+                    Content="{StaticResource OpenTable}"
+                    Margin="{StaticResource ControlMargin}"
+                    Cursor="Hand"/>
+
+        <Button x:Name="Left" ToolTip="{StaticResource Back}" Grid.Column="5" Grid.Row="2" 
+                    HorizontalAlignment="Right" 
+                    Margin="{StaticResource ControlMargin}" Cursor="Hand" Click="Left_Click">
+            <Button.Content>
+                <iconPacks:PackIconMaterial Width="20" Height="20"
+                                       Foreground="{DynamicResource MahApps.Brushes.Accent}"
+                                       Kind="ArrowLeft" />
+            </Button.Content>
+        </Button>
+        <Button x:Name="Right" ToolTip="{StaticResource Next}" Grid.Column="6" Grid.Row="2" 
+                    HorizontalAlignment="Left" 
+                    Margin="{StaticResource ControlMargin}" Cursor="Hand" Click="Right_Click">
+            <Button.Content>
+                <iconPacks:PackIconMaterial Width="20" Height="20"
+                                       Foreground="{DynamicResource MahApps.Brushes.Accent}"
+                                       Kind="ArrowRight" />
+            </Button.Content>
+        </Button>
+        <Button x:Name="Refresh" ToolTip="{StaticResource Refresh}" Grid.Column="7" Grid.Row="2" 
+                    HorizontalAlignment="Left" 
+                    Margin="{StaticResource ControlMargin}" Cursor="Hand" Click="Refresh_Click">
+            <Button.Content>
+                <iconPacks:PackIconMaterial Width="20" Height="20"
+                                       Foreground="{DynamicResource MahApps.Brushes.Accent}"
+                                       Kind="Refresh" />
+            </Button.Content>
+        </Button>
+        <Button Grid.Column="8" Grid.Row="2" Name="AddTab" ToolTip="{StaticResource AddTab}"
+                Click="AddTab_Click" HorizontalAlignment='Left' Margin="{StaticResource ControlMargin}"   >
+            <Button.Content>
+
+                <iconPacks:PackIconMaterial Width="24" Height="24"
+                                       Foreground="{DynamicResource MahApps.Brushes.Accent}"
+                                       Kind="Tab" />
+            </Button.Content>
+        </Button>
+        <Button Grid.Column="9" Grid.Row="2" Name="RemoveTab" ToolTip="{StaticResource CloseTab}"
+                Click="RemoveTab_Click" HorizontalAlignment='Left' Margin="{StaticResource ControlMargin}"   >
+            <Button.Content>
+
+                <iconPacks:PackIconMaterial Width="24" Height="24"
+                                       Foreground="Red"
+                                       Kind="Tab" />
+            </Button.Content>
+        </Button>
+        <Button x:Name="Help" ToolTip="{StaticResource Help}" Grid.Column="10" Grid.Row="2" 
+                    HorizontalAlignment="Left" 
+                    Margin="{StaticResource ControlMargin}" Cursor="Hand" Click="Help_Click">
+            <Button.Content>
+                <iconPacks:PackIconMaterial Width="20" Height="20"
+                                       Foreground="{DynamicResource MahApps.Brushes.Accent}"
+                                       Kind="Help" />
+            </Button.Content>
+        </Button>
+        <DockPanel Grid.Row="4"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="12">
+
+            <wv2:WebView2 x:Name="webView"
+
+             />
+        </DockPanel>
+
+    </Grid>
+</UserControl>

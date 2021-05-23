@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D365FO Table browser", "D365FO Table browser\D365FO Table browser.csproj", "{3E179FA3-5109-4ED5-A8C5-29AAC216B324}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup D365FO Table browser", "Setup D365FO Table browser\Setup D365FO Table browser.vdproj", "{F41B569B-F9AF-4ECF-8AE8-97844BD52FC3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3E179FA3-5109-4ED5-A8C5-29AAC216B324}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E179FA3-5109-4ED5-A8C5-29AAC216B324}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E179FA3-5109-4ED5-A8C5-29AAC216B324}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E179FA3-5109-4ED5-A8C5-29AAC216B324}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F41B569B-F9AF-4ECF-8AE8-97844BD52FC3}.Debug|Any CPU.ActiveCfg = Debug
+		{F41B569B-F9AF-4ECF-8AE8-97844BD52FC3}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EBBB3114-CA6F-4AE9-82A1-5F70B4F0ABA3}
+	EndGlobalSection
+
+EndGlobal

@@ -1,0 +1,106 @@
+﻿<Page
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:D365FO_Table_browser.Views"
+      xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+      xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+      xmlns:metro="clr-namespace:MahApps.Metro;assembly=MahApps.Metro"
+      xmlns:ViewModels="clr-namespace:D365FO_Table_browser.ViewModels" x:Class="D365FO_Table_browser.Views.SettingsPage"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="SettingsPage" FontFamily="Segoe UI"  >
+
+    <Border Margin="10">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="Auto" />
+
+            </Grid.RowDefinitions>
+
+            <Canvas Grid.Column="0" Grid.Row="0" Width="100" Height="60" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Rectangle
+                    Width="130"
+                    Height="60"
+                    Fill="{DynamicResource MahApps.Brushes.Accent}"
+                />
+                <TextBlock Text="Settings"
+                FontSize="32"
+                Margin="8"
+                Foreground="{DynamicResource MahApps.Brushes.IdealForeground}"  
+                FontWeight="Light"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                />
+            </Canvas>
+
+            <iconPacks:PackIconMaterial Width="48" Grid.Row="0" Grid.Column="3"
+                                       Height="48"
+                                       Margin="10"
+                                       HorizontalAlignment="Right"
+                                       VerticalAlignment="Top"
+                                       Foreground="{DynamicResource MahApps.Brushes.Accent}"
+                                       Kind="Cog"/>
+
+            <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Content="Set your preferred settings, by selecting the values here they will be selected for you in the main page"/>
+
+
+            <Label Grid.Row="2" Grid.Column="0" Content="Default Server"/>
+            <ComboBox Grid.Column="0" Grid.Row="3" x:Name="ServerList" Padding="2"  
+                  Margin="{StaticResource ControlMargin}"  
+                  Controls:TextBoxHelper.ClearTextButton="True"
+                  Controls:TextBoxHelper.UseFloatingWatermark="False"
+                  Controls:TextBoxHelper.Watermark="Select default server"
+                  Width="Auto"
+                  HorizontalAlignment="Left" IsReadOnly="True" SelectionChanged="ServerList_SelectionChanged" ItemsSource="{Binding ServerURLS}">
+                <ComboBox.DataContext>
+                    <ViewModels:ServerListViewModel/>
+                </ComboBox.DataContext>
+            </ComboBox>
+
+            <Label Grid.Row="4" Grid.Column="0" Content="Default Company Account"/>
+            <ComboBox Grid.Column="0" Grid.Row="5" x:Name="CompanyList" Padding="2"  
+                  Margin="{StaticResource ControlMargin}"  
+                  Controls:TextBoxHelper.ClearTextButton="True"
+                  Controls:TextBoxHelper.UseFloatingWatermark="False"
+                  Controls:TextBoxHelper.Watermark="Select default company"
+                  HorizontalAlignment="Left" SelectionChanged="CompanyList_SelectionChanged" Width="Auto" ItemsSource="{Binding CompanyAccounts}">
+                <ComboBox.DataContext>
+                    <ViewModels:CompanyAccountViewModel/>
+                </ComboBox.DataContext>
+            </ComboBox>
+
+            <Label Grid.Row="6" Grid.Column="0" Content="Default Browser App"/>
+            <TextBox x:Name="TableBrowser" 
+                     Grid.Column="0" Grid.Row="7" 
+                     Padding="2" Margin="{StaticResource ColumnMargin}"
+                     VerticalAlignment="Center"
+                     HorizontalContentAlignment="Stretch"
+                     Controls:TextBoxHelper.ClearTextButton="False"
+                     Controls:TextBoxHelper.IsWaitingForData="True"
+                     Controls:TextBoxHelper.UseFloatingWatermark="False"
+                     Controls:TextBoxHelper.Watermark="Table browser"
+                     Controls:TextBoxHelper.WatermarkAlignment="Left"
+                     SpellCheck.IsEnabled="False"
+                     ToolTip="Type the name of your favorite table browser" 
+                     Controls:TextBoxHelper.HasText="True" TextChanged="TableBrowser_TextChanged"
+                     />
+
+        </Grid>
+    </Border>
+</Page>
