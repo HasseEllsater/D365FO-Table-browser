@@ -18,7 +18,7 @@ Use this with care, I have written this for my own use in my spare time, it is p
 # Installation
 I have published a MSI file and a setup.exe file, it is important that you run the setup.exe to get all the dependencies. You will find it in the releases section https://github.com/HasseEllsater/D365FO-Table-browser/releases
 
-# Known issues
-There has been some issues with the serialization of data when adding new records to settings tables in the browser. I will investigate
+# Fixed issues
+Fix dataloss bugg and sync bugg with tabs on main page, if new tables, company accounts or servers was added the comboboxes wasn't refreshed
 
 /Hasse
