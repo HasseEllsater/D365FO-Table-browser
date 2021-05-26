@@ -16,6 +16,6 @@ If you download this code and wish to use it, remember to restore all the nuget 
 Use this with care, I have written this for my own use in my spare time, it is provided AS IS and it can break anytime... As I think this a useful tool, I want to help and share it with anybody who needs it.
 
 # Installation
-I have published a MSI file and a setup.exe file, it is important that you run the setup.exe to get all the dependencies
+I have published a MSI file and a setup.exe file, it is important that you run the setup.exe to get all the dependencies. You will find it in the releases section https://github.com/HasseEllsater/D365FO-Table-browser/releases
 
 /Hasse
