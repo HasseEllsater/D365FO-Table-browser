@@ -82,7 +82,7 @@
                     ItemsSource="{Binding Tables}"
                     ScrollViewer.CanContentScroll="True" 
                     ScrollViewer.VerticalScrollBarVisibility="Auto"
-                    ScrollViewer.HorizontalScrollBarVisibility="Auto" SelectionChanged="TableGrid_SelectionChanged" >
+                    ScrollViewer.HorizontalScrollBarVisibility="Auto" SelectionChanged="TableGrid_SelectionChanged" CellEditEnding="TableGrid_CellEditEnding" >
                     <DataGrid.Columns>
                         <DataGridTextColumn IsReadOnly="False" Binding="{Binding Name, Mode=TwoWay}"  Header="Table Name" Width="1*"/>
                         <DataGridTextColumn IsReadOnly="False" Binding="{Binding Description, Mode=TwoWay}"  Header="Description" Width="1*"/>

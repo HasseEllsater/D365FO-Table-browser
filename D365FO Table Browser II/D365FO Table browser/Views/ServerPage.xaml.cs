@@ -80,5 +80,12 @@ namespace D365FO_Table_browser.Views
                 }
             }
         }
+
+        private void ServerGrid_CellEditEnding(object sender, DataGridCellEditEndingEventArgs e)
+        {
+            MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
+            mainWindow.ServerListView.SaveChanges();
+
+        }
     }
 }

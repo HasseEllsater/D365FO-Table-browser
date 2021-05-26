@@ -91,5 +91,11 @@ namespace D365FO_Table_browser.Views
                 }
             }
         }
+
+        private void CompanyGrid_CellEditEnding(object sender, DataGridCellEditEndingEventArgs e)
+        {
+            MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
+            mainWindow.CompanyAccountListView.SaveChanges();
+        }
     }
 }

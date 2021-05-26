@@ -83,7 +83,7 @@
                     ItemsSource="{Binding CompanyAccounts}"
                     ScrollViewer.CanContentScroll="True" 
                     ScrollViewer.VerticalScrollBarVisibility="Auto"
-                    ScrollViewer.HorizontalScrollBarVisibility="Auto" Grid.ColumnSpan="3" SelectionChanged="CompanyGrid_SelectionChanged">
+                    ScrollViewer.HorizontalScrollBarVisibility="Auto" Grid.ColumnSpan="3" SelectionChanged="CompanyGrid_SelectionChanged" CellEditEnding="CompanyGrid_CellEditEnding">
                     <DataGrid.Columns>
                         <DataGridTextColumn IsReadOnly="False" Binding="{Binding Account, Mode=TwoWay}"  Header="Account" Width="100"/>
                         <DataGridTextColumn IsReadOnly="False" Binding="{Binding Description, Mode=TwoWay}"  Header="Description" Width="1*"/> 

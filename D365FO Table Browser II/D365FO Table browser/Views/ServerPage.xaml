@@ -83,7 +83,7 @@
                     ItemsSource="{Binding ServerURLS}"
                     ScrollViewer.CanContentScroll="True" 
                     ScrollViewer.VerticalScrollBarVisibility="Auto"
-                    ScrollViewer.HorizontalScrollBarVisibility="Auto" SelectionChanged="ServerGrid_SelectionChanged">
+                    ScrollViewer.HorizontalScrollBarVisibility="Auto" SelectionChanged="ServerGrid_SelectionChanged" CellEditEnding="ServerGrid_CellEditEnding">
                     <DataGrid.Columns>
                         <DataGridTextColumn IsReadOnly="False" Binding="{Binding Name, Mode=TwoWay}"  Header="Name" Width="Auto"/>
                         <DataGridTextColumn IsReadOnly="False" Binding="{Binding ServerURL, Mode=TwoWay}"  Header="Server url" Width="1*"/>

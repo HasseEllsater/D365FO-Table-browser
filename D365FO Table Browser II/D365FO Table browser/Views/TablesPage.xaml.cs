@@ -29,7 +29,7 @@ namespace D365FO_Table_browser.Views
             InitializeComponent();
             InitList();
         }
-
+      
         private void InitList()
         {
             MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
@@ -87,6 +87,12 @@ namespace D365FO_Table_browser.Views
                     }
                 }
             }
+        }
+
+        private void TableGrid_CellEditEnding(object sender, DataGridCellEditEndingEventArgs e)
+        {
+            MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
+            mainWindow.TableListView.SaveChanges();
         }
     }
 }
