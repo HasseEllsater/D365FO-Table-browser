@@ -1,6 +1,7 @@
 ﻿using D365FO_Table_browser.Classes;
 using D365FO_Table_browser.Data;
 using D365FO_Table_browser.ViewModels;
+using D365FO_Table_browser.Views;
 using MahApps.Metro.Controls;
 using MahApps.Metro.Controls.Dialogs;
 using Newtonsoft.Json;
@@ -50,88 +51,6 @@ namespace D365FO_Table_browser
                 }
             }
         }
-        private void CheckAboutFile()
-        {
-            string fileName = "About.html";
-            string destfile = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + "\\" + "About.html";
-            Stream file;
-            if (!File.Exists(destfile))
-            {
-                file = this.getFile(fileName);
-                this.SaveStreamToFile(destfile, file);
-            }
-            fileName = "SKutt.png";
-            destfile = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + "\\" + "SKutt.png";
-            if (!File.Exists(destfile))
-            {
-                file = this.getFile(fileName);
-                this.SaveStreamToFile(destfile, file);
-            }
-            Properties.Settings.Default.AboutFile = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + "\\" + "About.html";
-            Properties.Settings.Default.Save();
-
-        }
-        private void SaveStreamToFile(string fileFullPath, Stream stream)
-        {
-            if (stream.Length == 0)
-            {
-                return;
-            }
-
-            // Create a FileStream object to write a stream to a file
-            using (FileStream fileStream = System.IO.File.Create(fileFullPath, (int)stream.Length))
-            {
-                // Fill the bytes[] array with the stream data
-                byte[] bytesInStream = new byte[stream.Length];
-                stream.Read(bytesInStream, 0, (int)bytesInStream.Length);
-                // Use FileStream object to write to the specified file
-                fileStream.Write(bytesInStream, 0, bytesInStream.Length);
-
-                //byte[] bytesInStream = ToArray(stream);
-                //fileStream.Write(bytesInStream, 0, bytesInStream.Length);
-
-
-            }
-        }
-        [System.Security.Permissions.SecurityPermission(System.Security.Permissions.SecurityAction.Demand)]
-        private Stream getFile(string Name)
-        {
-            string asmname = string.Empty;
-            try
-            {
-                // Gets the current assembly.
-                Assembly Asm = Assembly.GetExecutingAssembly();
-                asmname = Asm.GetName().Name + "." + Name;
-                // Resources are named using a fully qualified name.
-                Stream strm = Asm.GetManifestResourceStream(asmname);
-                return strm; ;
-            }
-            catch (Exception ex)
-            {           
-                throw ex;
-            }
-        }
-        public static byte[] ToArray(Stream s)
-        {
-            if (s == null)
-                throw new ArgumentNullException(nameof(s));
-            if (!s.CanRead)
-                throw new ArgumentException("Stream cannot be read");
-
-            MemoryStream ms = s as MemoryStream;
-            if (ms != null)
-                return ms.ToArray();
-
-            long pos = s.CanSeek ? s.Position : 0L;
-            if (pos != 0L)
-                s.Seek(0, SeekOrigin.Begin);
-
-            byte[] result = new byte[s.Length];
-            s.Read(result, 0, result.Length);
-            if (s.CanSeek)
-                s.Seek(pos, SeekOrigin.Begin);
-            return result;
-        }
         #region FrameWork
         private void HamburgerMenuControl_OnItemInvoked(object sender, HamburgerMenuItemInvokedEventArgs e)
         {
@@ -180,7 +99,17 @@ namespace D365FO_Table_browser
             TableListView = new TableViewModel();
             BrowserTabListView = new BrowserTabItemViewModel();
         }
+        public void refreshAllTabs()
+        {
+            foreach(BrowserTabItem tab in BrowserTabListView.BrowserTabItems)
+            {
+                TableControl tableControl = tab.Content as TableControl;
+                tableControl.InitDataContext(this);
 
+            }
+
+
+        }
         internal async void closeTab()
         {
             if(this.BrowserTabListView.BrowserTabItems.Count == 1)

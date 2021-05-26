@@ -18,7 +18,7 @@ namespace D365FO_Table_browser.ViewModels
         {
             LoadTabs();
         }
-        private void LoadTabs()
+        public void LoadTabs()
         {
             BrowserTabItems = new ObservableCollection<BrowserTabItem>();
             BrowserTabItem tabItem = new BrowserTabItem

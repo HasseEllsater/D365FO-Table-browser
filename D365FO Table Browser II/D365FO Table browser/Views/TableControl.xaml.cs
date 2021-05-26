@@ -29,7 +29,7 @@ namespace D365FO_Table_browser.Views
 
         async void InitializeAsync()
         {
-            
+
             string programData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData); ;
             programData = Path.Combine(programData, Properties.Settings.Default.AppDataFolder);
 
@@ -69,9 +69,8 @@ namespace D365FO_Table_browser.Views
                 {
                     CompanyAccount.SelectedItem = mainWindow.CompanyAccountListView.SetSelectedItem(Properties.Settings.Default.DefaultCompany);
                 }
-                //this.Tables.DataContext = mainWindow.TableListView;
-                //this.Tables.ItemsSource = mainWindow.TableListView.Tables;
 
+                InitDataContext(mainWindow);
 
             }
             catch (Exception ex)
@@ -82,14 +81,18 @@ namespace D365FO_Table_browser.Views
                     eventLog.WriteEntry(ex.ToString(), EventLogEntryType.Error, 100);
                 }
             }
-
-
-            //var editableCollectionTables = (IEditableCollectionView)Tables.Items;
-            //if (editableCollectionTables != null)
-            //{
-            //    editableCollectionTables.NewItemPlaceholderPosition = NewItemPlaceholderPosition.None;
-            //}
         }
+
+        public void InitDataContext(MainWindow mainWindow)
+        {
+            Tables.DataContext = mainWindow.TableListView;
+            Tables.ItemsSource = mainWindow.TableListView.Tables.ToList<D365Table>();
+            CompanyAccount.DataContext = mainWindow.CompanyAccountListView;
+            CompanyAccount.ItemsSource = mainWindow.CompanyAccountListView.CompanyAccounts.ToList<CompanyAccount>();
+            Server.DataContext = mainWindow.ServerListView;
+            Server.ItemsSource = mainWindow.ServerListView.ServerURLS.ToList<D365ServerURL>();
+        }
+
         private void OpenTable_Click(object sender, RoutedEventArgs e)
         {
             if (webView != null && webView.CoreWebView2 != null)
@@ -159,6 +162,9 @@ namespace D365FO_Table_browser.Views
 
         private void Refresh_Click(object sender, RoutedEventArgs e)
         {
+            MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
+            InitDataContext(mainWindow);
+
             webView.CoreWebView2.Reload();
         }
 

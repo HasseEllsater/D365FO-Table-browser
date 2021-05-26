@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Navigation;
 
@@ -44,7 +45,12 @@ namespace D365FO_Table_browser.Navigation
         {
             if (this.Frame.CurrentSource != sourcePageUri)
             {
+                if(this.Frame.CurrentSource != null)
+                {
+                    SaveData(this.Frame.CurrentSource);
+                }
                 return this.Frame.Navigate(sourcePageUri, extraData);
+
             }
 
             return false;
@@ -59,7 +65,23 @@ namespace D365FO_Table_browser.Navigation
 
             return false;
         }
+        private void SaveData(Uri currentSource)
+        {
+            MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
 
+            if (currentSource.ToString() == "Views/CompanyAccountsPage.xaml")
+            {
+                mainWindow.CompanyAccountListView.SaveChanges();
+            }
+            if (currentSource.ToString() == "Views/ServerPage.xaml")
+            {
+                mainWindow.ServerListView.SaveChanges();
+            }
+            if (currentSource.ToString() == "Views/TablesPage.xaml")
+            {
+                mainWindow.TableListView.SaveChanges();
+            }
+        }
         private void RegisterFrameEvents()
         {
             if (this._frame != null)

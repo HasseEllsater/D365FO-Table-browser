@@ -38,6 +38,7 @@ namespace D365FO_Table_browser.Views
             MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
             TableTabControl.DataContext = mainWindow.BrowserTabListView;
             TableTabControl.ItemsSource = mainWindow.BrowserTabListView.BrowserTabItems;
+            mainWindow.refreshAllTabs();
         }
 
         private void TableTabControl_TabItemClosingEvent(object sender, MahApps.Metro.Controls.BaseMetroTabControl.TabItemClosingEventArgs e)

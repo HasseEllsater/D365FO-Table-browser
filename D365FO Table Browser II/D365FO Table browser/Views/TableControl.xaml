@@ -39,11 +39,11 @@
                   Controls:TextBoxHelper.ClearTextButton="True"
                   Controls:TextBoxHelper.UseFloatingWatermark="False"
                   Controls:TextBoxHelper.Watermark="Select company"
-                    Width="Auto" IsReadOnly="True" ItemsSource="{Binding CompanyAccounts}" Grid.ColumnSpan="2"
+                    Width="Auto" IsReadOnly="True" ItemsSource="{Binding CompanyAccounts}" Grid.ColumnSpan="2" IsEditable="False" 
                   >
-            <ComboBox.DataContext>
+<!--            <ComboBox.DataContext>
                 <ViewModels:CompanyAccountViewModel/>
-            </ComboBox.DataContext>
+            </ComboBox.DataContext>-->
         </ComboBox>
 
         <Label Grid.Row="1" Grid.Column="2" Content="Server"/>
@@ -54,9 +54,9 @@
                   Controls:TextBoxHelper.Watermark="Select server"
                   Width="Auto" IsReadOnly="True" ItemsSource="{Binding ServerURLS}"
                   >
-            <ComboBox.DataContext>
+            <!--<ComboBox.DataContext>
                 <ViewModels:ServerListViewModel/>
-            </ComboBox.DataContext>
+            </ComboBox.DataContext>-->
         </ComboBox>
 
         <Label Grid.Row="1" Grid.Column="3" Content="Table"/>
@@ -67,9 +67,9 @@
                   Controls:TextBoxHelper.Watermark="Pick the table you wish to browse"
                   Width="Auto"
                   SelectionChanged="Tables_SelectionChanged" IsReadOnly="True" ItemsSource="{Binding Tables}">
-            <ComboBox.DataContext>
+            <!--<ComboBox.DataContext>
                 <ViewModels:TableViewModel/>
-            </ComboBox.DataContext>
+            </ComboBox.DataContext>-->
         </ComboBox>
         <!--SelectedItem="{Binding D365Table,
                   TargetNullValue={x:Static CollectionView.NewItemPlaceholder}}"-->
