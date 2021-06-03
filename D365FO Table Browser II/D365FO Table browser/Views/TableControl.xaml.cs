@@ -97,11 +97,24 @@ namespace D365FO_Table_browser.Views
         {
             if (webView != null && webView.CoreWebView2 != null)
             {
-                if (Server.SelectedItem == null || CompanyAccount.SelectedItem == null || Tables.SelectedItem == null)
+                if (Server.SelectedItem == null || CompanyAccount.SelectedItem == null || string.IsNullOrEmpty(Tables.Text))
                 {
                     MessageBox.Show(Properties.Resources.CantOpenTable, Properties.Resources.ConfirmAction, MessageBoxButton.OK, MessageBoxImage.Exclamation);
                     return;
                 }
+                MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
+
+                if (Tables.SelectedItem == null)
+                {
+                    D365Table d365tableAdd = new D365Table();
+                    d365tableAdd.Name = Tables.Text;
+                    mainWindow.TableListView.Tables.Add(d365tableAdd);
+                    mainWindow.TableListView.SelectedTable = d365tableAdd;
+                    Tables.DataContext = mainWindow.TableListView;
+                    Tables.ItemsSource = mainWindow.TableListView.Tables.ToList<D365Table>();
+                    Tables.SelectedItem = d365tableAdd;
+                }
+
 
                 D365ServerURL serverUrl = Server.SelectedItem as D365ServerURL;
                 string server = serverUrl.ServerURL;
@@ -124,7 +137,6 @@ namespace D365FO_Table_browser.Views
                 webView.CoreWebView2.Navigate(gotoTable);
 
  
-                MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
 
       
                 if (mainWindow.BrowserTabListView.SelectedTab != null)
@@ -208,5 +220,7 @@ namespace D365FO_Table_browser.Views
             MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
             mainWindow.closeTab();
         }
+
+
     }
 }
