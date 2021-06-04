@@ -21,7 +21,7 @@ I have published a MSI file and a setup.exe file, it is important that you run t
 # Fixed issues
 Fix dataloss bugg and sync bugg with tabs on main page, if new tables, company accounts or servers was added the comboboxes wasn't refreshed
 
-#Features
+# Features
 2021-06-03 Add tables to combobox in table browser control, you can now add new tables without the need to add them to the tables page. Just type the table name and click the 'Open the selected table button' it will then open the table and add it to your quick list of tables.
 
 /Hasse
