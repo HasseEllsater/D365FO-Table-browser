@@ -15,6 +15,12 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_0E080A5BC530440CB95889EE661F7DF5"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_1CC07A1D4E734A59A770205AACEF2669"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -22,31 +28,31 @@
         "Entry"
         {
         "MsmKey" = "8:_36DFEE086F0533B8B251EAC930698F39"
-        "OwnerKey" = "8:_99ADE86720B04794A51AEA6F503124E4"
+        "OwnerKey" = "8:_0E080A5BC530440CB95889EE661F7DF5"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_4BAB2B0DBEF8E31DE99FFC49DBFAB049"
-        "OwnerKey" = "8:_99ADE86720B04794A51AEA6F503124E4"
+        "OwnerKey" = "8:_0E080A5BC530440CB95889EE661F7DF5"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_4D41BB4CDEA0B59BC2F7F1D0423A4E05"
-        "OwnerKey" = "8:_99ADE86720B04794A51AEA6F503124E4"
+        "MsmKey" = "8:_4EAB5A00D200563602C8961DBDD87021"
+        "OwnerKey" = "8:_0E080A5BC530440CB95889EE661F7DF5"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_5163CA6B69594170B10E2E9BA346515F"
+        "MsmKey" = "8:_5099B9E794C542908C33373FE9EDCF5B"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_60122AFF945A8F50D5AC07FB2F9DDDEF"
-        "OwnerKey" = "8:_99ADE86720B04794A51AEA6F503124E4"
+        "MsmKey" = "8:_62A9937F2E933B69A8D3FC691563BCDD"
+        "OwnerKey" = "8:_0E080A5BC530440CB95889EE661F7DF5"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -58,7 +64,7 @@
         "Entry"
         {
         "MsmKey" = "8:_7CD0130376483828776F2F2102C0E9B8"
-        "OwnerKey" = "8:_99ADE86720B04794A51AEA6F503124E4"
+        "OwnerKey" = "8:_0E080A5BC530440CB95889EE661F7DF5"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -76,13 +82,13 @@
         "Entry"
         {
         "MsmKey" = "8:_8A085F43085195374E5E4D8B6CB1C371"
-        "OwnerKey" = "8:_99ADE86720B04794A51AEA6F503124E4"
+        "OwnerKey" = "8:_0E080A5BC530440CB95889EE661F7DF5"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_957693D6F9FCCE9E2FAF0D9F06352B61"
-        "OwnerKey" = "8:_99ADE86720B04794A51AEA6F503124E4"
+        "OwnerKey" = "8:_0E080A5BC530440CB95889EE661F7DF5"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -93,26 +99,20 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_99ADE86720B04794A51AEA6F503124E4"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_ACF1D643812AC0ED56A3CD53DDF4A05F"
-        "OwnerKey" = "8:_99ADE86720B04794A51AEA6F503124E4"
+        "OwnerKey" = "8:_0E080A5BC530440CB95889EE661F7DF5"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_AF7F07A50F577FE4E572A2F7F6AD3DA5"
-        "OwnerKey" = "8:_99ADE86720B04794A51AEA6F503124E4"
+        "OwnerKey" = "8:_0E080A5BC530440CB95889EE661F7DF5"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_E40C848A9D96621C83DE689206C451F2"
-        "OwnerKey" = "8:_99ADE86720B04794A51AEA6F503124E4"
+        "OwnerKey" = "8:_0E080A5BC530440CB95889EE661F7DF5"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -123,26 +123,32 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_F73364916DD68AAFA2D118C588090AD1"
-        "OwnerKey" = "8:_99ADE86720B04794A51AEA6F503124E4"
+        "MsmKey" = "8:_EAF15E2C94FDC92BD6A6B66C376F0D45"
+        "OwnerKey" = "8:_0E080A5BC530440CB95889EE661F7DF5"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_F73364916DD68AAFA2D118C588090AD1"
-        "OwnerKey" = "8:_4D41BB4CDEA0B59BC2F7F1D0423A4E05"
+        "MsmKey" = "8:_EAF15E2C94FDC92BD6A6B66C376F0D45"
+        "OwnerKey" = "8:_62A9937F2E933B69A8D3FC691563BCDD"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_F73364916DD68AAFA2D118C588090AD1"
-        "OwnerKey" = "8:_60122AFF945A8F50D5AC07FB2F9DDDEF"
+        "MsmKey" = "8:_EAF15E2C94FDC92BD6A6B66C376F0D45"
+        "OwnerKey" = "8:_4EAB5A00D200563602C8961DBDD87021"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_99ADE86720B04794A51AEA6F503124E4"
+        "OwnerKey" = "8:_36DFEE086F0533B8B251EAC930698F39"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_0E080A5BC530440CB95889EE661F7DF5"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -160,19 +166,19 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_4D41BB4CDEA0B59BC2F7F1D0423A4E05"
+        "OwnerKey" = "8:_62A9937F2E933B69A8D3FC691563BCDD"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_60122AFF945A8F50D5AC07FB2F9DDDEF"
+        "OwnerKey" = "8:_4EAB5A00D200563602C8961DBDD87021"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_F73364916DD68AAFA2D118C588090AD1"
+        "OwnerKey" = "8:_EAF15E2C94FDC92BD6A6B66C376F0D45"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -203,12 +209,6 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_7CD0130376483828776F2F2102C0E9B8"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_36DFEE086F0533B8B251EAC930698F39"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -393,20 +393,20 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_4D41BB4CDEA0B59BC2F7F1D0423A4E05"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_4EAB5A00D200563602C8961DBDD87021"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Microsoft.Web.WebView2.Wpf, Version=1.0.1210.39, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:Microsoft.Web.WebView2.WinForms, Version=1.0.1264.42, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_4D41BB4CDEA0B59BC2F7F1D0423A4E05"
+                    "_4EAB5A00D200563602C8961DBDD87021"
                     {
-                    "Name" = "8:Microsoft.Web.WebView2.Wpf.dll"
+                    "Name" = "8:Microsoft.Web.WebView2.WinForms.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:Microsoft.Web.WebView2.Wpf.dll"
+            "SourcePath" = "8:Microsoft.Web.WebView2.WinForms.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_F3FCC3ACB8E2460BB56D39F8B2F5656B"
@@ -424,12 +424,12 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5163CA6B69594170B10E2E9BA346515F"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5099B9E794C542908C33373FE9EDCF5B"
             {
             "SourcePath" = "8:..\\D365FO Table browser\\bin\\Release\\runtimes\\win-x64\\native\\WebView2Loader.dll"
             "TargetName" = "8:WebView2Loader.dll"
             "Tag" = "8:"
-            "Folder" = "8:_150FD0B8E1E545CAB6B7BCD6083950EB"
+            "Folder" = "8:_9A1D8DD2C79843C4A8B553C088CA80C6"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -444,20 +444,20 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_60122AFF945A8F50D5AC07FB2F9DDDEF"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_62A9937F2E933B69A8D3FC691563BCDD"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Microsoft.Web.WebView2.WinForms, Version=1.0.1210.39, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:Microsoft.Web.WebView2.Wpf, Version=1.0.1264.42, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_60122AFF945A8F50D5AC07FB2F9DDDEF"
+                    "_62A9937F2E933B69A8D3FC691563BCDD"
                     {
-                    "Name" = "8:Microsoft.Web.WebView2.WinForms.dll"
+                    "Name" = "8:Microsoft.Web.WebView2.Wpf.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:Microsoft.Web.WebView2.WinForms.dll"
+            "SourcePath" = "8:Microsoft.Web.WebView2.Wpf.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_F3FCC3ACB8E2460BB56D39F8B2F5656B"
@@ -681,14 +681,14 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_F73364916DD68AAFA2D118C588090AD1"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_EAF15E2C94FDC92BD6A6B66C376F0D45"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Microsoft.Web.WebView2.Core, Version=1.0.1210.39, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:Microsoft.Web.WebView2.Core, Version=1.0.1264.42, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_F73364916DD68AAFA2D118C588090AD1"
+                    "_EAF15E2C94FDC92BD6A6B66C376F0D45"
                     {
                     "Name" = "8:Microsoft.Web.WebView2.Core.dll"
                     "Attributes" = "3:512"
@@ -772,75 +772,31 @@
             "Property" = "8:TARGETDIR"
                 "Folders"
                 {
-                    "{9EF0B969-E518-4E46-987F-47570745A589}:_C13857AE65304191AD4826AA1CFE9AB2"
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_13C21C9EC4FE49ABBD757DA4CB207F3D"
                     {
                     "Name" = "8:runtimes"
                     "AlwaysCreate" = "11:FALSE"
                     "Condition" = "8:"
                     "Transitive" = "11:FALSE"
-                    "Property" = "8:_BA4ED9F9BF854C21919C9869DCD59634"
+                    "Property" = "8:_D12CB0D3D1504B01BAB1EB9144183AEC"
                         "Folders"
                         {
-                            "{9EF0B969-E518-4E46-987F-47570745A589}:_042EFB88722D45BEADE0F5796ED2FC76"
+                            "{9EF0B969-E518-4E46-987F-47570745A589}:_F23A2C2B5B0B44D8AD074FD7996A558C"
                             {
                             "Name" = "8:win-x64"
                             "AlwaysCreate" = "11:FALSE"
                             "Condition" = "8:"
                             "Transitive" = "11:FALSE"
-                            "Property" = "8:_E62FC9BCFF2D42DEB20628D11FC487EE"
+                            "Property" = "8:_187522CC0CF643D59B0B49AB04C24229"
                                 "Folders"
                                 {
-                                    "{9EF0B969-E518-4E46-987F-47570745A589}:_150FD0B8E1E545CAB6B7BCD6083950EB"
+                                    "{9EF0B969-E518-4E46-987F-47570745A589}:_9A1D8DD2C79843C4A8B553C088CA80C6"
                                     {
                                     "Name" = "8:native"
                                     "AlwaysCreate" = "11:FALSE"
                                     "Condition" = "8:"
                                     "Transitive" = "11:FALSE"
-                                    "Property" = "8:_900BA09C8C2A426FB52E8F4689CB88BE"
-                                        "Folders"
-                                        {
-                                        }
-                                    }
-                                }
-                            }
-                            "{9EF0B969-E518-4E46-987F-47570745A589}:_2432C1B3627D45178F88D374C4B7D9B9"
-                            {
-                            "Name" = "8:win-x86"
-                            "AlwaysCreate" = "11:FALSE"
-                            "Condition" = "8:"
-                            "Transitive" = "11:FALSE"
-                            "Property" = "8:_77ECD45C885A43FA9597F851EC4BDEF0"
-                                "Folders"
-                                {
-                                    "{9EF0B969-E518-4E46-987F-47570745A589}:_0191CF6537EB4AB1A0AC6F3DF1500C9B"
-                                    {
-                                    "Name" = "8:native"
-                                    "AlwaysCreate" = "11:FALSE"
-                                    "Condition" = "8:"
-                                    "Transitive" = "11:FALSE"
-                                    "Property" = "8:_A67D2CA6FE3441E892095FD63DE25AD8"
-                                        "Folders"
-                                        {
-                                        }
-                                    }
-                                }
-                            }
-                            "{9EF0B969-E518-4E46-987F-47570745A589}:_C441FE21614A4A9295B72BA9DB9E1861"
-                            {
-                            "Name" = "8:win-arm64"
-                            "AlwaysCreate" = "11:FALSE"
-                            "Condition" = "8:"
-                            "Transitive" = "11:FALSE"
-                            "Property" = "8:_69213A14534C4A77944149E1D7EAE39A"
-                                "Folders"
-                                {
-                                    "{9EF0B969-E518-4E46-987F-47570745A589}:_3623F82FA92946B0B54264067B40B127"
-                                    {
-                                    "Name" = "8:native"
-                                    "AlwaysCreate" = "11:FALSE"
-                                    "Condition" = "8:"
-                                    "Transitive" = "11:FALSE"
-                                    "Property" = "8:_D9C602E470F94A16AACDB09025DC8D39"
+                                    "Property" = "8:_7BE6EB878AFC4BE0A482F8350272C229"
                                         "Folders"
                                         {
                                         }
@@ -867,15 +823,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:D365FO Table browser"
-        "ProductCode" = "8:{83379A8A-8FA1-48BA-A574-A231013E4DC7}"
-        "PackageCode" = "8:{DDCA9B3E-DE33-47CB-B827-FAC6C77A2786}"
+        "ProductCode" = "8:{FFAB2D74-C673-4F26-BE38-8852056EE00D}"
+        "PackageCode" = "8:{F749853A-5C76-4ADF-B0C9-58FD6387F413}"
         "UpgradeCode" = "8:{38205605-28BE-4662-BD24-29789501282C}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.5"
+        "ProductVersion" = "8:1.5.1"
         "Manufacturer" = "8:DevMethod"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -988,7 +944,7 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_A06550F700AD47599AD33CDA1ECF38E4"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_345C7A8BD4664B7E89C13EB498BCA983"
             {
             "Name" = "8:D365FO Table browser"
             "Arguments" = "8:"
@@ -996,13 +952,13 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_99ADE86720B04794A51AEA6F503124E4"
-            "Folder" = "8:_1F44ACBCF3F8408A97419EEBADB686CE"
+            "Target" = "8:_0E080A5BC530440CB95889EE661F7DF5"
+            "Folder" = "8:_C42E021D652F44539673C9E37E1A4952"
             "WorkingFolder" = "8:_F3FCC3ACB8E2460BB56D39F8B2F5656B"
             "Icon" = "8:_1CC07A1D4E734A59A770205AACEF2669"
             "Feature" = "8:"
             }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_C60ACBD6A9DA49E69675AE8306F345BB"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_BF29B5A2CF2846F3AB2DB657B32ABB70"
             {
             "Name" = "8:D365FO Table browser"
             "Arguments" = "8:"
@@ -1010,8 +966,8 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_99ADE86720B04794A51AEA6F503124E4"
-            "Folder" = "8:_C42E021D652F44539673C9E37E1A4952"
+            "Target" = "8:_0E080A5BC530440CB95889EE661F7DF5"
+            "Folder" = "8:_1F44ACBCF3F8408A97419EEBADB686CE"
             "WorkingFolder" = "8:_F3FCC3ACB8E2460BB56D39F8B2F5656B"
             "Icon" = "8:_1CC07A1D4E734A59A770205AACEF2669"
             "Feature" = "8:"
@@ -1425,9 +1381,9 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_99ADE86720B04794A51AEA6F503124E4"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_0E080A5BC530440CB95889EE661F7DF5"
             {
-            "SourcePath" = "8:..\\D365FO Table browser\\obj\\Debug\\D365FO_Table_browser.exe"
+            "SourcePath" = "8:..\\D365FO Table browser\\obj\\Release\\D365FO_Table_browser.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_F3FCC3ACB8E2460BB56D39F8B2F5656B"
