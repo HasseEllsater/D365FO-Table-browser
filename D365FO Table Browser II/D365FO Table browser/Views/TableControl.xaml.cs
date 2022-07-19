@@ -1,4 +1,5 @@
-﻿using D365FO_Table_browser.Data;
+﻿using D365FO_Table_browser.Classes;
+using D365FO_Table_browser.Data;
 using Microsoft.Web.WebView2.Core;
 using System;
 using System.ComponentModel;
@@ -34,10 +35,9 @@ namespace D365FO_Table_browser.Views
             programData = Path.Combine(programData, Properties.Settings.Default.AppDataFolder);
 
             var webView2Environment = await CoreWebView2Environment.CreateAsync(null, programData);
-
+ 
             await webView.EnsureCoreWebView2Async(webView2Environment);
-
-            if(SkipSelect == false)
+            if (SkipSelect == false)
             {
                 string uri = Properties.Settings.Default.LastURL;
                 if (!string.IsNullOrEmpty(uri))
@@ -51,7 +51,7 @@ namespace D365FO_Table_browser.Views
                         }
                     }
                     webView.CoreWebView2.Navigate(uri);
-                }
+                }    
             }
         }
         private void InitLists()

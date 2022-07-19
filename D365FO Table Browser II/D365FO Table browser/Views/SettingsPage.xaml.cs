@@ -25,12 +25,23 @@ namespace D365FO_Table_browser.Views
 
             if (mainWindow.ServerListView.ServerURLS != null)
             {
-                ServerList.SelectedItem = mainWindow.ServerListView.SetSelectedItem(Properties.Settings.Default.DefaultServer);
+                D365ServerURL d365ServerURL = mainWindow.ServerListView.SetSelectedItem(Properties.Settings.Default.DefaultServer);
+                ServerList.ItemsSource = mainWindow.ServerListView.ServerURLS;
+                
+                if (d365ServerURL != null)
+                {
+                    ServerList.SelectedItem = d365ServerURL;
+                }
             }
 
             if (mainWindow.CompanyAccountListView.CompanyAccounts != null)
             {
-                CompanyList.SelectedItem = mainWindow.CompanyAccountListView.SetSelectedItem(Properties.Settings.Default.DefaultCompany);
+                CompanyAccount companyAccount = mainWindow.CompanyAccountListView.SetSelectedItem(Properties.Settings.Default.DefaultCompany);
+                CompanyList.ItemsSource = mainWindow.CompanyAccountListView.CompanyAccounts;
+                if (companyAccount != null)
+                {
+                    CompanyList.SelectedItem = companyAccount;
+                }
             }
 
             TableBrowser.Text = Properties.Settings.Default.DefaultTableBrowser;
