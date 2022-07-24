@@ -5,8 +5,9 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
              xmlns:wv2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf" 
-             xmlns:ViewModels="clr-namespace:D365FO_Table_browser.ViewModels" xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks" x:Class="D365FO_Table_browser.Views.TableControl" 
-             mc:Ignorable="d" 
+             xmlns:ViewModels="clr-namespace:D365FO_Table_browser.ViewModels" xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks" 
+             xmlns:wv21="clr-namespace:D365FO_Table_browser.Classes" x:Class="D365FO_Table_browser.Views.TableControl" 
+             mc:Ignorable="d" FontFamily="Fonts/Poppins"
              d:DesignHeight="450" d:DesignWidth="880" Height="Auto"  MinWidth="970"  >
     <Grid>
 
@@ -29,8 +30,9 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
-            <RowDefinition Height="15" />
+            <RowDefinition Height="8" />
             <RowDefinition Height="1*" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
         <Label Grid.Row="1" Grid.Column="0" Content="Company Account" Grid.ColumnSpan="2"/>
@@ -127,10 +129,10 @@
                    Grid.Column="0"
                    Grid.ColumnSpan="12">
 
-            <wv2:WebView2 x:Name="webView"
+            <wv21:TableBrowserWebView x:Name="webView"
 
              />
         </DockPanel>
-
+        <TextBlock Padding="4" Name="FullUrl" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="6" Text="..."/>
     </Grid>
 </UserControl>

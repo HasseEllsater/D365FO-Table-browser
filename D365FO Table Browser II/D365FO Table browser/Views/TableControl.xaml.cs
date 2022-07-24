@@ -17,6 +17,7 @@ namespace D365FO_Table_browser.Views
     public partial class TableControl : UserControl
     {
         private bool SkipSelect { get; set; }
+        
         public TableControl(bool _skipSelect = false)
         {
             SkipSelect = _skipSelect;
@@ -37,6 +38,7 @@ namespace D365FO_Table_browser.Views
             var webView2Environment = await CoreWebView2Environment.CreateAsync(null, programData);
  
             await webView.EnsureCoreWebView2Async(webView2Environment);
+            
             if (SkipSelect == false)
             {
                 string uri = Properties.Settings.Default.LastURL;
@@ -51,8 +53,10 @@ namespace D365FO_Table_browser.Views
                         }
                     }
                     webView.CoreWebView2.Navigate(uri);
+                    FullUrl.Text = uri;
                 }    
             }
+
         }
         private void InitLists()
         {
@@ -127,17 +131,15 @@ namespace D365FO_Table_browser.Views
 
                 string menuItem = Properties.Settings.Default.DefaultTableBrowser;
 
-                string gotoTable = "{0}/?mi={1}&cmp={2}&prt=initial&limitednav=true&TableName={3}";
+                string gotoTable = "{0}?mi={1}&cmp={2}&prt=initial&limitednav=true&TableName={3}";
 
 
                 gotoTable = string.Format(gotoTable, server, menuItem, account, table);
+                FullUrl.Text = gotoTable;
 
                 Properties.Settings.Default.LastURL = gotoTable;
-
+         
                 webView.CoreWebView2.Navigate(gotoTable);
-
- 
-
       
                 if (mainWindow.BrowserTabListView.SelectedTab != null)
                 {
@@ -211,14 +213,13 @@ namespace D365FO_Table_browser.Views
             };
 
             mainWindow.BrowserTabListView.BrowserTabItems.Add(tabItem);
-            mainWindow.BrowserTabListView.SelectedTab = tabItem;
             this.DataContext = mainWindow.BrowserTabListView;
         }
 
         private async void RemoveTab_Click(object sender, RoutedEventArgs e)
         {
             MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
-            mainWindow.closeTab();
+            mainWindow.CloseTab();
         }
 
 

@@ -10,7 +10,7 @@
       xmlns:ViewModels="clr-namespace:D365FO_Table_browser.ViewModels" x:Class="D365FO_Table_browser.Views.SettingsPage"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="SettingsPage" FontFamily="Segoe UI"  >
+      Title="SettingsPage" FontFamily="Fonts/Poppins"  >
 
     <Border Margin="10">
         <Grid>
@@ -36,7 +36,7 @@
             <Canvas Grid.Column="0" Grid.Row="0" Width="100" Height="60" HorizontalAlignment="Left" VerticalAlignment="Top">
                 <Rectangle
                     Width="130"
-                    Height="60"
+                    Height="55"
                     Fill="{DynamicResource MahApps.Brushes.Accent}"
                 />
                 <TextBlock Text="Settings"

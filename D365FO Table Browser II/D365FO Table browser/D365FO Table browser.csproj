@@ -222,6 +222,9 @@
     <None Include="FodyWeavers.xsd">
       <SubType>Designer</SubType>
     </None>
+    <Resource Include="Fonts\Poppins-ExtraLight.ttf" />
+    <Resource Include="Fonts\Poppins-Light.ttf" />
+    <Resource Include="Fonts\Poppins-Regular.ttf" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

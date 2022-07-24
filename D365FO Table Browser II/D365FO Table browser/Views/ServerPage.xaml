@@ -8,7 +8,7 @@
       xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Server Page" FontFamily="Segoe UI">
+      Title="Server Page" FontFamily="Fonts/Poppins">
 
     <Border Margin="10">
         <Grid>
@@ -40,7 +40,7 @@
             <Canvas Grid.Column="0" Grid.Row="0" Width="100" Height="60" HorizontalAlignment="Left" VerticalAlignment="Top">
                 <Rectangle
                     Width="120"
-                    Height="60"
+                    Height="55"
                     Fill="{DynamicResource MahApps.Brushes.Accent}"
                 />
                 <TextBlock Text="Servers"

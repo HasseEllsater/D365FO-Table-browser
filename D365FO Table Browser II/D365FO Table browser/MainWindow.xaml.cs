@@ -99,7 +99,7 @@ namespace D365FO_Table_browser
             TableListView = new TableViewModel();
             BrowserTabListView = new BrowserTabItemViewModel();
         }
-        public void refreshAllTabs()
+        public void RefreshAllTabs()
         {
             foreach(BrowserTabItem tab in BrowserTabListView.BrowserTabItems)
             {
@@ -110,7 +110,7 @@ namespace D365FO_Table_browser
 
 
         }
-        internal async void closeTab()
+        internal async void CloseTab()
         {
             if(this.BrowserTabListView.BrowserTabItems.Count == 1)
             {

@@ -142,12 +142,6 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_36DFEE086F0533B8B251EAC930698F39"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_0E080A5BC530440CB95889EE661F7DF5"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -209,6 +203,12 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_7CD0130376483828776F2F2102C0E9B8"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_36DFEE086F0533B8B251EAC930698F39"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -823,15 +823,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:D365FO Table browser"
-        "ProductCode" = "8:{FFAB2D74-C673-4F26-BE38-8852056EE00D}"
-        "PackageCode" = "8:{F749853A-5C76-4ADF-B0C9-58FD6387F413}"
+        "ProductCode" = "8:{5DB147D8-A161-4ECA-85AA-C91E749ED4F5}"
+        "PackageCode" = "8:{47ED71C4-0C7C-4E08-9C98-E4500B5CC1BD}"
         "UpgradeCode" = "8:{38205605-28BE-4662-BD24-29789501282C}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.5.1"
+        "ProductVersion" = "8:1.5.2"
         "Manufacturer" = "8:DevMethod"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"

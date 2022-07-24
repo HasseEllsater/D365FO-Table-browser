@@ -20,7 +20,7 @@ namespace D365FO_Table_browser.Classes
                 this.CoreWebView2InitializationCompleted += TableBrowserWebView_CoreWebView2InitializationCompleted;
             }
         }
-        private void CoreWebView2_NewWindowRequested(object sender, CoreWebView2NewWindowRequestedEventArgs e)
+        public void CoreWebView2_NewWindowRequested(object sender, CoreWebView2NewWindowRequestedEventArgs e)
         {
             TableBrowserWebView browser = new TableBrowserWebView();
             browser.Deferral = e.GetDeferral();

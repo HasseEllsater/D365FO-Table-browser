@@ -10,7 +10,7 @@
       xmlns:mvvm="clr-namespace:DevopsHelper.ViewModels" 
       mc:Ignorable="d" 
       d:DesignHeight="750" d:DesignWidth="870"
-      Title="MainPage" FontFamily="Segoe UI" >
+      Title="MainPage" FontFamily="Fonts/Poppins" >
 
     <Border Margin="10">
         <Grid>
@@ -37,7 +37,7 @@
             <Canvas Grid.Column="0" Grid.Row="0" Width="100" Height="60" HorizontalAlignment="Left" VerticalAlignment="Top">
                 <Rectangle
                     Width="100"
-                    Height="60"
+                    Height="55"
                     Fill="{DynamicResource MahApps.Brushes.Accent}"
                 />
                 <TextBlock Text="Home"
