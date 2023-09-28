@@ -1,4 +1,5 @@
 ﻿using D365FO_Table_browser.Data;
+using D365FO_Table_browser.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,26 @@ namespace D365FO_Table_browser.Views
         {
             InitializeComponent();
             InitLists();
+            InitTabTitle();
         }
+        private void InitTabTitle()
+        {
+            TabTitleViewModel firstTabTitleViewModel = First.DataContext as TabTitleViewModel;
+            if(!string.IsNullOrEmpty(Properties.Settings.Default.First))
+            {
+                First.SelectedItem = firstTabTitleViewModel.SetSelectedTabTitle(Properties.Settings.Default.First);
+            }
+            TabTitleViewModel secondTabTitleViewModel = Second.DataContext as TabTitleViewModel;
+            if (!string.IsNullOrEmpty(Properties.Settings.Default.Second))
+            {
+                Second.SelectedItem = secondTabTitleViewModel.SetSelectedTabTitle(Properties.Settings.Default.Second);
+            }
+            TabTitleViewModel lastTabTitleViewModel = Last.DataContext as TabTitleViewModel;
+            if (!string.IsNullOrEmpty(Properties.Settings.Default.Last))
+            {
+                Last.SelectedItem = lastTabTitleViewModel.SetSelectedTabTitle(Properties.Settings.Default.Last);
+            }
+        }   
         private void InitLists()
         {
             MainWindow mainWindow = Application.Current.MainWindow as MainWindow;
@@ -70,6 +90,33 @@ namespace D365FO_Table_browser.Views
             {
                 D365ServerURL serverURL = ServerList.SelectedItem as D365ServerURL;
                 Properties.Settings.Default.DefaultServer = serverURL.ServerURL;
+                Properties.Settings.Default.Save();
+            }
+        }
+
+        private void First_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if(First.SelectedItem != null)
+            {
+                Properties.Settings.Default.First = First.SelectedItem.ToString();
+                Properties.Settings.Default.Save();
+            }
+        }
+
+        private void Second_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if(Second.SelectedItem != null)
+            {
+                Properties.Settings.Default.Second = Second.SelectedItem.ToString();
+                Properties.Settings.Default.Save();
+            }
+        }
+
+        private void Last_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if(Last.SelectedItem != null)
+            {
+                Properties.Settings.Default.Last = Last.SelectedItem.ToString();
                 Properties.Settings.Default.Save();
             }
         }

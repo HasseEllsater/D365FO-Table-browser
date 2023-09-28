@@ -143,8 +143,81 @@ namespace D365FO_Table_browser.Views
       
                 if (mainWindow.BrowserTabListView.SelectedTab != null)
                 {
+                    string tabName = string.Empty;
                     BrowserTabItem selectedTab = mainWindow.BrowserTabListView.BrowserTabItems.FirstOrDefault(x => x.TabName.Equals(mainWindow.BrowserTabListView.SelectedTab.TabName));
-                    selectedTab.TabName = string.Format ("{0} - {1}", account,table);
+                    if(!string.IsNullOrEmpty(Properties.Settings.Default.First))
+                    {
+                        if(Properties.Settings.Default.First != "<empty>")
+                        {
+                            //Switch on Properties.Setting.Default.First
+                            switch (Properties.Settings.Default.First)
+                            {
+                                case "Company":
+                                    tabName += account + "-";
+                                    break;
+                                    case "Server":
+                                        tabName += serverUrl.Name + "-";
+                                    break;
+                                    case "Table":
+                                        tabName += table + "-";
+                                    break;
+                                default:
+                                    break;
+                            }
+                        }
+                    }
+                    if (!string.IsNullOrEmpty(Properties.Settings.Default.Second))
+                    {
+                        if (Properties.Settings.Default.First != "<empty>")
+                        {
+                            //Switch on Properties.Setting.Default.First
+                            switch (Properties.Settings.Default.Second)
+                            {
+                                case "Company":
+                                    tabName += account + "-";
+                                    break;
+                                case "Server":
+                                    tabName += serverUrl.Name + "-";
+                                    break;
+                                case "Table":
+                                    tabName += table + "-";
+                                    break;
+                                default:
+                                    break;
+                            }
+                        }
+                    }
+                    if (!string.IsNullOrEmpty(Properties.Settings.Default.Last))
+                    {
+                        if (Properties.Settings.Default.First != "<empty>")
+                        {
+                            //Switch on Properties.Setting.Default.First
+                            switch (Properties.Settings.Default.Last)
+                            {
+                                case "Company":
+                                    tabName += account + "-";
+                                    break;
+                                case "Server":
+                                    tabName += serverUrl.Name + "-";
+                                    break;
+                                case "Table":
+                                    tabName += table + "-";
+                                    break;
+                                default:
+                                    break;
+                            }
+                        }
+                    }
+                    if(!string.IsNullOrWhiteSpace(tabName))
+                    {
+                        //Remove last -
+                        tabName = tabName.Substring(0, tabName.Length - 1);
+                        selectedTab.TabName = tabName;
+                    }
+                    else
+                    {
+                        selectedTab.TabName = string.Format("{0} - {1}", account, table);
+                    }
                 }
             }
         }

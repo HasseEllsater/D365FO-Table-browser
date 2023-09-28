@@ -52,9 +52,7 @@
                   Controls:TextBoxHelper.ClearTextButton="True"
                   Controls:TextBoxHelper.UseFloatingWatermark="False"
                   Controls:TextBoxHelper.Watermark="Select server"
-                  Width="Auto" IsReadOnly="True" ItemsSource="{Binding ServerURLS}"
-                  >
-
+                  Width="Auto" IsReadOnly="True" ItemsSource="{Binding ServerURLS}">
         </ComboBox>
 
         <Label Grid.Row="1" Grid.Column="3" Content="Table"/>
@@ -64,7 +62,8 @@
                   Controls:TextBoxHelper.UseFloatingWatermark="False"
                   Controls:TextBoxHelper.Watermark="Pick the table you wish to browse"
                   Width="Auto"
-                  SelectionChanged="Tables_SelectionChanged" ItemsSource="{Binding Tables}" IsEditable="True" />
+                  SelectionChanged="Tables_SelectionChanged" IsEditable="True">
+        </ComboBox>
 
         <Button x:Name="OpenRDP" Click="OpenTable_Click" ToolTip="{StaticResource OpenTable}" Grid.Column="4" Grid.Row="2" HorizontalAlignment="Left"
                     Content="{StaticResource OpenTable}"

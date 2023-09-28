@@ -35,5 +35,14 @@
     <Setting Name="HelpPage" Type="System.String" Scope="User">
       <Value Profile="(Default)">https://memyselfandax.wordpress.com/simple-d365fo-table-browser/</Value>
     </Setting>
+    <Setting Name="First" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Second" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Last" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

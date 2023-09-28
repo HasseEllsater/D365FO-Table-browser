@@ -6,6 +6,7 @@
       xmlns:local="clr-namespace:D365FO_Table_browser.Views"
       xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
       xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+      xmlns:properties="clr-namespace:D365FO_Table_browser.Properties"
       xmlns:metro="clr-namespace:MahApps.Metro;assembly=MahApps.Metro"
       xmlns:ViewModels="clr-namespace:D365FO_Table_browser.ViewModels" x:Class="D365FO_Table_browser.Views.SettingsPage"
       mc:Ignorable="d" 
@@ -30,7 +31,9 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="30" />
                 <RowDefinition Height="Auto" />
-
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
 
             <Canvas Grid.Column="0" Grid.Row="0" Width="100" Height="60" HorizontalAlignment="Left" VerticalAlignment="Top">
@@ -101,6 +104,42 @@
                      Controls:TextBoxHelper.HasText="True" TextChanged="TableBrowser_TextChanged"
                      />
 
+            <Label Grid.Row="8" Grid.Column="0" Content="Setup the Tab Title you wish to use"/>
+            <Grid Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="4"                   Margin="{StaticResource ControlMargin}"   >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <ComboBox x:Name="First" Grid.Row="10" Grid.Column="0"
+                    ItemsSource="{Binding TabTitles}"
+                    SelectedItem="{Binding SelectedTabTitle}"                  
+                    Margin="{StaticResource ControlMargin}" SelectionChanged="First_SelectionChanged">
+                    <ComboBox.DataContext>
+                        <ViewModels:TabTitleViewModel/>
+                    </ComboBox.DataContext>
+                </ComboBox>
+                <ComboBox x:Name="Second" Grid.Row="10" Grid.Column="1"
+                          ItemsSource="{Binding TabTitles}"
+                          SelectedItem="{Binding SelectedTabTitle}"
+                          Margin="{StaticResource ControlMargin}" SelectionChanged="Second_SelectionChanged">
+                    <ComboBox.DataContext>
+                        <ViewModels:TabTitleViewModel/>
+                    </ComboBox.DataContext>
+                </ComboBox>
+                <ComboBox x:Name="Last" Grid.Row="10" Grid.Column="2"
+                          ItemsSource="{Binding TabTitles}"
+                          SelectedItem="{Binding SelectedTabTitle}"
+                          Margin="{StaticResource ControlMargin}" SelectionChanged="Last_SelectionChanged">
+                    <ComboBox.DataContext>
+                        <ViewModels:TabTitleViewModel/>
+                    </ComboBox.DataContext>
+                </ComboBox>
+            </Grid>
         </Grid>
     </Border>
 </Page>
