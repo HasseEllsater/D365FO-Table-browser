@@ -6,8 +6,8 @@ Feel free to download and contribute. The UI is based on MahApps.Metro (great li
 
 You will find some info on how to use it on my blog https://memyselfandax.wordpress.com/simple-d365fo-table-browser/
 
-# Visual Studio 2019
-This is built with visual studio 2019, use nuget to get the referenced librarys used by this app.
+# Visual Studio 2022
+This is built with visual studio 2022, use nuget to get the referenced librarys used by this app.
 The solution also consist of a setup program that let you easily distribute the app within your project. To be able to load the setup program in Visual Studio the Extension "Microsoft Visual Studio Installer Project" must be installed first. 
 
 If you download this code and wish to use it, remember to restore all the nuget packages
