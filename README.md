@@ -1,5 +1,5 @@
 # D365FO-Table-browser
-Simple table browser for D365FO
+
 This is a simple table browser for D365FO, the intent is to make it quick and easy to browse tables in D365FO whitout having to edit the urls all the time.
 
 Feel free to download and contribute. The UI is based on MahApps.Metro (great library!) and ControlzEx components.
