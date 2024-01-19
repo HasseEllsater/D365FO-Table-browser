@@ -26,4 +26,7 @@ Fix dataloss bugg and sync bugg with tabs on main page, if new tables, company a
 # Features
 2021-06-03 Add tables to combobox in table browser control, you can now add new tables without the need to add them to the tables page. Just type the table name and click the 'Open the selected table button' it will then open the table and add it to your quick list of tables.
 
+# More cool tools
+Visit DevMethod's site and check out the DevMethod tools for Azure TFVC projects: https://devmethod.azurewebsites.net
+
 /Hasse
